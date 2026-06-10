@@ -98,8 +98,10 @@ public class LoopsAndShapes {
      * [1,2,3,4] -> 24
      */
     public static int multiplyListElements(List<Integer> numbers) {
-        // TODO: Implement this method
-        return 0;
+        char[] numberTOList = String.valueOf(numbers).toCharArray();
+        int product = 0;
+        for (char num: numberTOList) product *= (int) num;
+        return product;
     }
 
     /**
@@ -114,8 +116,10 @@ public class LoopsAndShapes {
      * For n = 3
      */
     public static List<String> createBasicNumberTriangle(int n) {
-        // TODO: Implement this method
-        return null;
+        ArrayList<String> triangle = new ArrayList<>();
+        if (n == 0) return triangle;
+        for (int num = 1; num <= n; num++) triangle.add(String.valueOf((Math.pow(num, num) - 1)/9));
+        return triangle;
     }
 
     /**
