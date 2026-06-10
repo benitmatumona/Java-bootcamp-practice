@@ -66,8 +66,10 @@ public class LoopsAndShapes {
      * 123 -> 6
      */
     public static int sumDigits(int number) {
-        // TODO: Implement this method
-        return 0;
+        char[] numberTOList = String.valueOf(number).toCharArray();
+        int sum = 0;
+        for (char num: numberTOList) sum += (int) num;
+        return sum;
     }
 
     /**
@@ -78,8 +80,13 @@ public class LoopsAndShapes {
      * Ignore case.
      */
     public static int countVowels(String text) {
-        // TODO: Implement this method
-        return 0;
+        int count = 0;
+        ArrayList<Character> vowels = new ArrayList<Character>(List.of(
+                'a', 'e', 'i', 'o', 'u')
+        );
+        for (char letter: text.toLowerCase().toCharArray())
+            if (vowels.contains(letter)) count ++;
+        return count;
     }
 
     /**
