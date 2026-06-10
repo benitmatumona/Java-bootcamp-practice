@@ -15,8 +15,9 @@ public class LoopsAndShapes {
      * [1,2,3,4,5] -> 5
      */
     public static int countItems(List<?> items) {
-        // TODO: Implement this method
-        return 0;
+        int count = 0;
+        for (Object item: items) count++;
+        return count;
     }
 
     /**
@@ -28,8 +29,9 @@ public class LoopsAndShapes {
      * [1,2,3,4,5] -> 15
      */
     public static int sumNumbers(List<Integer> numbers) {
-        // TODO: Implement this method
-        return 0;
+        int sum = 0;
+        for (int num: numbers) sum += num;
+        return sum;
     }
 
     /**
@@ -38,8 +40,10 @@ public class LoopsAndShapes {
      * Find and return the largest number.
      */
     public static int findLargest(List<Integer> numbers) {
-        // TODO: Implement this method
-        return 0;
+        if (numbers.isEmpty()) return 0;
+        int max = numbers.get(1);
+        for (int num: numbers) if (num > max) max = num;
+        return max;
     }
 
     /**
@@ -48,8 +52,9 @@ public class LoopsAndShapes {
      * Count all even numbers.
      */
     public static int countEvenNumbers(List<Integer> numbers) {
-        // TODO: Implement this method
-        return 0;
+        int count = 0;
+        for (int num: numbers) if (num % 2 == 0) count ++;
+        return count;
     }
 
     /**
